@@ -40,10 +40,7 @@ export default function MultipleSelect({ data = [] }) {
     detectSymbol(value, regex);
   };
 
-  const handleAutocompleteChange = (
-    event: React.SyntheticEvent<Element, Event>,
-    value: multiselectProps[]
-  ) => {
+  const handleAutocompleteChange = (value: multiselectProps[]) => {
     const lastID = value.length > 0 ? value[value.length - 1].id : "";
     detectSymbol(currentVal, regex, setSymbolsArray, lastID);
     setSelectedOptions(value);
