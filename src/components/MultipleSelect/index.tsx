@@ -44,7 +44,7 @@ export default function MultipleSelect({ data = [] }) {
     event: React.SyntheticEvent<Element, Event>,
     value: any
   ) => {
-    console.log("");
+    console.log(event);
     const lastID = value.length > 0 ? value[value.length - 1].id : "";
     detectSymbol(currentVal, regex, setSymbolsArray, lastID);
     setSelectedOptions(value);
